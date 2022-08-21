@@ -18,7 +18,7 @@ void PrintArr(int[] array)
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1) Console.Write(array[i] + ",");
+        if (i < array.Length - 1) Console.Write(array[i] + ", ");
     }
     Console.Write(array[array.Length - 1]);
     Console.Write("]");
@@ -31,12 +31,10 @@ int EvenNum(int[] array)
     {
         if (array[i] % 2 == 0) count++;
     }
-
     return count;
 }
 
-
-int[] arr = CreateArrayRndInt(4, 100, 1000);
+int[] arr = CreateArrayRndInt(4, 100, 999);
 PrintArr(arr);
 int result = EvenNum(arr);
 Console.WriteLine();

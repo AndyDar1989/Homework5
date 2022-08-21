@@ -19,7 +19,7 @@ void PrintArr(int[] array)
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1) Console.Write(array[i] + ",");
+        if (i < array.Length - 1) Console.Write(array[i] + ", ");
     }
     Console.Write(array[array.Length - 1]);
     Console.Write("]");
@@ -35,8 +35,8 @@ int SumOfOddIndex(int[] array)
     return sum;
 }
 
-int[] arr = CreateArrayRndInt(4, -100, 100);
+int[] arr = CreateArrayRndInt(6, -10, 100);
 PrintArr(arr);
 int result = SumOfOddIndex(arr);
 Console.WriteLine();
-Console.WriteLine($"the sum of elements on the odd positions is {result}");
+Console.WriteLine($"The sum of elements on the odd positions is {result}");

@@ -19,9 +19,9 @@ void PrintArr(double[] array)
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        if (i < array.Length - 1) Console.Write(Math.Round(array[i], 2) + "  ");
+        if (i < array.Length - 1) Console.Write(Math.Round(array[i], 1) + "  ");
     }
-    Console.Write(Math.Round(array[array.Length - 1], 2));
+    Console.Write(Math.Round(array[array.Length - 1], 1));
     Console.Write("]");
 }
 
@@ -37,8 +37,8 @@ double MinMaxDiff(double[] array)
     double diff = max - min; return diff;
 }
 
-double[] arr = CreateArrayRndDouble(5, -10.0, 10.0);
+double[] arr = CreateArrayRndDouble(7, -100.0, 100.0);
 PrintArr(arr);
 double result = MinMaxDiff(arr);
 Console.WriteLine();
-Console.WriteLine($"The difference between maximal and minimal elements of the array is {Math.Round(result, 2)}");
+Console.WriteLine($"The difference between maximal and minimal elements of the array is {Math.Round(result, 1)}");
